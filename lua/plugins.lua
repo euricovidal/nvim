@@ -336,11 +336,13 @@ return {
       require("bufferline").setup()
 
       -- Navigate buffer next/prev
-      vim.keymap.set("n", "<C-Left>", ':BufferLineCyclePrev<CR>')
-      vim.keymap.set("n", "<C-Right>", ':BufferLineCycleNext<CR>')
+      vim.keymap.set("n", "<C-Left>", ":BufferLineCyclePrev<CR>")
+      vim.keymap.set("n", "<C-Right>", ":BufferLineCycleNext<CR>")
 
       -- Buffer remove
-      vim.keymap.set("n", "<leader>bd", ':bd<CR>')
+      vim.keymap.set("n", "<leader>bd", ":bd<CR>")
+      -- Toggle between two files in buffer
+      vim.keymap.set("n", "<leader>l", ":e#<CR>")
     end
   },
   -- { -- other option buffer line/tabs
@@ -507,6 +509,23 @@ return {
       require("trouble").setup()
 
       vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", {silent = true, noremap = true})
+    end
+  },
+  { -- Basic Snippets
+    "dcampos/nvim-snippy",
+    dependencies = { "honza/vim-snippets" },
+    config = function()
+      require('snippy').setup({
+        mappings = {
+          is = {
+            ['<Tab>'] = 'expand_or_advance',
+            ['<S-Tab>'] = 'previous',
+          },
+          nx = {
+            ['<leader>x'] = 'cut_text',
+          },
+        },
+      })
     end
   }
 }

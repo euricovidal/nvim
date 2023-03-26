@@ -1,7 +1,7 @@
 -- Author: Eurico Vidal <euricovidal@gmail.com>
 -- Source: https://github.com/euricovidal/dotvim.git
 -- CreatedAt: 2023-03-25 16:30
--- UpdatedAt: 2023-03-26 02:30
+-- UpdatedAt: 2023-03-26 03:09
 
 -- Lazy - Package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -35,10 +35,17 @@ vim.cmd("set foldlevelstart=3")
 vim.cmd("set foldmethod=expr")
 vim.cmd("set foldexpr=nvim_treesitter#foldexpr()")
 
+-- Force he soft of TAB
+vim.o.expandtab = true
+vim.o.softtabstop = 0
+vim.o.shiftwidth = 2
+
+-- clear search
+vim.keymap.set("n", "<leader>/", ":nohl<CR>")
+
 -- CTAGS refresh tags
 vim.keymap.set(
   "n",
   "<leader>rt",
   ":!ctags --extra=+f --exclude=.git --exclude=log --exclude=node_modules --exclude=db --exclude=tmp -R *<CR>"
 )
-
