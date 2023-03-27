@@ -336,10 +336,10 @@ return {
       require("bufferline").setup()
 
       -- Navigate buffer next/prev
-      -- vim.keymap.set("n", "<C-Left>", ":BufferLineCyclePrev<CR>")
-      -- vim.keymap.set("n", "<C-Right>", ":BufferLineCycleNext<CR>")
-      vim.keymap.set("n", "<C-Left>", ":bp<CR>")
-      vim.keymap.set("n", "<C-Right>", ":bn<CR>")
+      vim.keymap.set("n", "<C-l>", ":BufferLineCyclePrev<CR>")
+      vim.keymap.set("n", "<C-h>", ":BufferLineCycleNext<CR>")
+      -- vim.keymap.set("n", "<C-Left>", ":bp<CR>")
+      -- vim.keymap.set("n", "<C-Right>", ":bn<CR>")
 
       -- Buffer remove
       vim.keymap.set("n", "<leader>bd", ":bd<CR>")
