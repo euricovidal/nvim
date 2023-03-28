@@ -1,43 +1,56 @@
 return {
-  { "wakatime/vim-wakatime" },
-  { "rrethy/vim-illuminate" },
-  { "tpope/vim-rails" },
+  { "wakatime/vim-wakatime" }, -- https://github.com/wakatime/vim-wakatime
+  { "rrethy/vim-illuminate" }, -- https://github.com/RRethy/vim-illuminate
+  { "tpope/vim-rails" }, -- https://github.com/tpope/vim-rails
   { -- Theme monokai
-    "crusoexia/vim-monokai",
-    -- other option "cpea2506/one_monokai.nvim",
+    "crusoexia/vim-monokai", -- https://github.com/crusoexia/vim-monokai
+    -- other option "cpea2506/one_monokai.nvim", -- https://github.com/cpea2506/one_monokai.nvim
     config = function()
       vim.cmd.colorscheme('monokai')
     end
   },
   { -- Telescope (like CTRL+P, FZF)
-    "nvim-telescope/telescope.nvim", tag = "0.1.1",
+    "nvim-telescope/telescope.nvim", tag = "0.1.1", -- https://github.com/nvim-telescope/telescope.nvim
     dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" },
     config = function()
       require("telescope").setup({
         defaults = {
           borderchars = { "─", "|", "─", "|", "╭", "╮", "╯", "╰" },
           layout_config = {
-            vertical = { width = 0.5 }
+            prompt_position = "bottom",
           }
+        },
+        -- change to vertical layout to all the files path
+        pickers = {
+          find_files = {
+            layout_strategy = "vertical",
+            layout_config = { width = 0.8, height = 0.8 },
+          },
+          grep_string = {
+            layout_strategy = "vertical",
+            layout_config = { width = 0.8, height = 0.8 },
+          },
+          live_grep = {
+            layout_strategy = "vertical",
+            layout_config = { width = 0.8, height = 0.8 },
+          },
+          oldfiles = {
+            layout_strategy = "vertical",
+            layout_config = { width = 0.8, height = 0.8 },
+          },
         }
       })
 
-      local builtin = require('telescope.builtin')
+      -- Enable to wrap the code on preview pane
+      -- vim.cmd("autocmd User TelescopePreviewerLoaded setlocal wrap")
+
       vim.keymap.set('n', '<leader>p', ':Telescope<CR>', {})
-      vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-      vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-      vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-    end
-  },
-  {
-    -- :Lazy build telescope-fzf-native.nvim
-    "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = false,
-    config = function()
-      require("telescope").load_extension("fzf")
+      vim.keymap.set('n', '<leader>ff', ':Telescope find_files<CR>', {})
+      -- vim.keymap.set('n', '<leader>ff', ":Telescope find_files theme=ivy<CR>", {})
     end
   },
   { -- Files Tree
-    "nvim-neo-tree/neo-tree.nvim", branch = "v2.x",
+    "nvim-neo-tree/neo-tree.nvim", branch = "v2.x", -- https://github.com/nvim-neo-tree/neo-tree.nvim
     dependencies = {
       "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim",
       {
@@ -144,54 +157,24 @@ return {
   -- },
   {
     "neovim/nvim-lspconfig",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    dependencies = { "nvim-treesitter/nvim-treesitter" }, -- https://github.com/neovim/nvim-lspconfig
     config = function()
       local nvim_lsp = require('lspconfig')
 
-      local on_attach = function(client, bufnr)
-        -- require('completion').on_attach()
-
-        local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-        local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-
-        buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
-
-        -- Mappings
-        local opts = { noremap=true, silent=true }
-        -- buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-        -- buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-        -- buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-        -- buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-        -- buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-        -- buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
-        -- buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-        -- buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
-        -- buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-        -- buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-        -- buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-        -- buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
-        -- buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
-        -- buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-        -- buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-      end
-
-      -- local servers = {'pyright', 'gopls', 'rust_analyzer', 'solargraph'}
-      local servers = {'solargraph'}
-      for _, lsp in ipairs(servers) do
+      for _, lsp in ipairs({'solargraph'}) do
         nvim_lsp[lsp].setup {
-          on_attach = on_attach,
+          on_attach = function(client, bufnr)
+            local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+            local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+
+            buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+          end
         }
       end
-
-      -- require('nvim-treesitter.configs').setup({
-      --   highlight = {
-      --     enable = true
-      --   }
-      -- })
     end
   },
   {
-    "glepnir/lspsaga.nvim",
+    "glepnir/lspsaga.nvim", -- https://github.com/glepnir/lspsaga.nvim
     dependencies = { "nvim-tree/nvim-web-devicons", "nvim-treesitter/nvim-treesitter" },
     event = "BufRead",
     config = function()
@@ -284,53 +267,20 @@ return {
     end
   },
   { -- Statusline
-    "nvim-lualine/lualine.nvim",
+    "nvim-lualine/lualine.nvim", -- https://github.com/nvim-lualine/lualine.nvim
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       require('lualine').setup({
         options = {
           icons_enabled = true,
-          -- theme = 'molokai', -- 'auto',
           component_separators = { left = '', right = '' },
           section_separators = { left = '', right = '' },
-          -- disabled_filetypes = {
-          --   statusline = {},
-          --   winbar = {},
-          -- },
-          -- ignore_focus = {},
-          -- always_divide_middle = true,
-          -- globalstatus = false,
-          -- refresh = {
-          --   statusline = 1000,
-          --   tabline = 1000,
-          --   winbar = 1000,
-          -- }
         },
-        -- sections = {
-        --   lualine_a = {'mode'},
-        --   lualine_b = {'branch', 'diff', 'diagnostics'},
-        --   lualine_c = {'filename'},
-        --   lualine_x = {'encoding', 'fileformat', 'filetype'},
-        --   lualine_y = {'progress'},
-        --   lualine_z = {'location'}
-        -- },
-        -- inactive_sections = {
-        --   lualine_a = {},
-        --   lualine_b = {},
-        --   lualine_c = {'filename'},
-        --   lualine_x = {'location'},
-        --   lualine_y = {},
-        --   lualine_z = {}
-        -- },
-        -- tabline = {},
-        -- winbar = {},
-        -- inactive_winbar = {},
-        -- extensions = {}
       })
     end
   },
   {
-    "akinsho/bufferline.nvim",
+    "akinsho/bufferline.nvim", -- https://github.com/akinsho/bufferline.nvim
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       require("bufferline").setup()
@@ -352,7 +302,7 @@ return {
   --   dependencies = { "nvim-tree/nvim-web-devicons" }
   -- },
   {
-    "echasnovski/mini.nvim", version = '*',
+    "echasnovski/mini.nvim", version = '*', -- https://github.com/echasnovski/mini.nvim
     config = function()
       require("mini.animate").setup()
       require("mini.completion").setup()
@@ -375,30 +325,18 @@ return {
       require("mini.surround").setup() -- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
       require("mini.comment").setup()
       require("mini.indentscope").setup({
-        -- Module mappings. Use `''` (empty string) to disable one.
-        -- mappings = {
-        --   -- Textobjects
-        --   object_scope = 'ii',
-        --   object_scope_with_border = 'ai',
-
-        --   -- Motions (jump to respective border line; if not present - body line)
-        --   goto_top = '[i',
-        --   goto_bottom = ']i',
-        -- },
-
-        -- Which character to use for drawing scope indicator
         symbol = '¦'
       })
     end
   },
   { -- Remove empty spaces
-    "mcauley-penney/tidy.nvim",
+    "mcauley-penney/tidy.nvim", -- https://github.com/mcauley-penney/tidy.nvim
     config = function()
       require("tidy").setup()
     end
   },
   {
-    "gbprod/yanky.nvim",
+    "gbprod/yanky.nvim", -- https://github.com/gbprod/yanky.nvim
     config = function()
       require("yanky").setup()
 
@@ -411,20 +349,20 @@ return {
     end
   },
   { -- Search counter
-    "kevinhwang91/nvim-hlslens",
+    "kevinhwang91/nvim-hlslens", -- https://github.com/kevinhwang91/nvim-hlslens
     config = function()
       require("hlslens").setup()
       require("scrollbar.handlers.search").setup()
     end
   },
   { -- Scrollbar
-    "petertriho/nvim-scrollbar",
+    "petertriho/nvim-scrollbar", -- https://github.com/petertriho/nvim-scrollbar
     config = function()
       require("scrollbar").setup()
     end
   },
   { -- Git status/blame inline
-    "lewis6991/gitsigns.nvim",
+    "lewis6991/gitsigns.nvim", -- https://github.com/lewis6991/gitsigns.nvim
     config = function()
       require("gitsigns").setup({
         current_line_blame_opts = {
@@ -466,46 +404,14 @@ return {
     end
   },
   {
-    "dense-analysis/ale",
+    "dense-analysis/ale", -- https://github.com/dense-analysis/ale
     config = function()
       vim.g.ale_floating_window_border = { '|', '─', '╭', '╮', '╯', '╰', '|', '─' }
       require("scrollbar.handlers.ale").setup()
     end
   },
-  {
-    "rcarriga/nvim-notify",
-    config = function()
-      require("notify").setup()
-
-      require("telescope").load_extension("notify")
-    end
-  },
-  -- { -- break the autocomplete (modal)
-  --   "folke/noice.nvim",
-  --   dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },
-  --   config = function()
-  --     require("noice").setup({
-  --       lsp = {
-  --         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
-  --         override = {
-  --           ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-  --           ["vim.lsp.util.stylize_markdown"] = true,
-  --           ["cmp.entry.get_documentation"] = true,
-  --         },
-  --       },
-  --       -- you can enable a preset for easier configuration
-  --       presets = {
-  --         bottom_search = true, -- use a classic bottom cmdline for search
-  --         command_palette = true, -- position the cmdline and popupmenu together
-  --         long_message_to_split = true, -- long messages will be sent to a split
-  --         inc_rename = false, -- enables an input dialog for inc-rename.nvim
-  --         lsp_doc_border = false, -- add a border to hover docs and signature help
-  --       },
-  --     })
-  --   end
-  -- }
   { -- Trouble
-    "folke/trouble.nvim",
+    "folke/trouble.nvim", -- https://github.com/folke/trouble.nvim
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       require("trouble").setup()
@@ -514,7 +420,7 @@ return {
     end
   },
   { -- Basic Snippets
-    "dcampos/nvim-snippy",
+    "dcampos/nvim-snippy", -- https://github.com/dcampos/nvim-snippy
     dependencies = { "honza/vim-snippets" },
     config = function()
       require('snippy').setup({
@@ -531,7 +437,7 @@ return {
     end
   },
   { -- splash/initial screen
-    "glepnir/dashboard-nvim",
+    "glepnir/dashboard-nvim", -- https://github.com/glepnir/dashboard-nvim
     event = "VimEnter",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
@@ -582,6 +488,12 @@ return {
       --   ["Z"] = '~/.zshrc',
       --   ["S"] = '~/.ssh/config',
       -- }
+    end
+  },
+  { -- save the cursor position
+    "farmergreg/vim-lastplace", -- https://github.com/farmergreg/vim-lastplace
+    config = function()
+      vim.g.lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
     end
   }
 }
