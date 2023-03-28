@@ -31,6 +31,7 @@ vim.o.termguicolors = true
 require("lazy").setup("plugins")
 
 -- Set fold method
+vim.cmd("set foldenable")
 vim.cmd("set foldlevelstart=3")
 vim.cmd("set foldmethod=expr")
 vim.cmd("set foldexpr=nvim_treesitter#foldexpr()")
