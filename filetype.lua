@@ -12,6 +12,7 @@ vim.filetype.add({
     Brewfile = 'ruby',
   },
   pattern = {
+    ['.*%.arb'] = 'ruby',
     ['.*%.conf'] = 'conf',
     ['.*%.theme'] = 'conf',
     ['.*%.gradle'] = 'groovy',
