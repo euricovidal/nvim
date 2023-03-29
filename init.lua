@@ -36,6 +36,15 @@ vim.cmd("set foldlevelstart=3")
 vim.cmd("set foldmethod=expr")
 vim.cmd("set foldexpr=nvim_treesitter#foldexpr()")
 
+-- Set undo/swap/backup dir all inside the nvim tmp path
+vim.cmd("set undofile")
+vim.cmd("set backupdir=~/.config/nvim/tmp/backup/")
+vim.cmd("set undodir=~/.config/nvim/tmp/undo/")
+vim.cmd("set directory=~/.config/nvim/tmp/swap/")
+os.execute("mkdir -p ./tmp/backup/")
+os.execute("mkdir -p ./tmp/undo/")
+os.execute("mkdir -p ./tmp/swap/")
+
 -- Force he soft of TAB
 vim.o.expandtab = true
 vim.o.softtabstop = 0
