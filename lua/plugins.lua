@@ -161,7 +161,7 @@ return {
     config = function()
       local nvim_lsp = require('lspconfig')
 
-      for _, lsp in ipairs({'solargraph'}) do
+      for _, lsp in ipairs({'solargraph', 'solargraph-rails'}) do
         nvim_lsp[lsp].setup {
           on_attach = function(client, bufnr)
             local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
