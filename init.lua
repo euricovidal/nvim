@@ -59,3 +59,26 @@ vim.keymap.set(
   "<leader>rt",
   ":!ctags --extra=+f --exclude=.git --exclude=log --exclude=node_modules --exclude=db --exclude=tmp -R *<CR>"
 )
+
+-- write a debugger 🤘
+vim.keymap.set(
+  "n",
+  "<leader>d",
+  function()
+    local debug = ""
+    if vim.bo.filetype == "ruby" then
+      debug = "require 'pry-nav'; binding.pry"
+    elseif vim.bo.filetype == "javascript" then
+      debug = "debugger"
+    end
+
+    local cursor_pos = vim.api.nvim_win_get_cursor(0)
+
+    vim.api.nvim_buf_set_lines(
+      vim.api.nvim_get_current_buf(), vim.fn.line('.'), vim.fn.line('.'), false, { debug }
+    )
+    -- move the curor to the new line
+    vim.api.nvim_win_set_cursor(0, { cursor_pos[1] + 1, 0 })
+    vim.api.nvim_command('w')
+  end
+)
