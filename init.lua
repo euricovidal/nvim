@@ -1,7 +1,6 @@
 -- Author: Eurico Vidal <euricovidal@gmail.com>
 -- Source: https://github.com/euricovidal/dotvim.git
 -- CreatedAt: 2023-03-25 16:30
--- UpdatedAt: 2023-03-26 03:09
 
 -- Lazy - Package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
