@@ -83,4 +83,4 @@ vim.keymap.set(
 )
 
 -- Find merge conflict markers
-vim.keymap.set("n", "<leader>cf", "<ESC>/\v^[<=>\|]{7}( .*\|$)<CR>")
+vim.keymap.set("n", "<leader>cf", "<ESC>/\\v^[<=>|]{7,}( .*|$)<CR>")
