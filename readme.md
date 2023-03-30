@@ -66,30 +66,31 @@ Set as *:*, but have the alias as *;*, só don't need to press SHIFT to use it.
 
 |   Keybind  | Description |
 |------------|-------------|
-| <LEADER>/  | Clear the highlight of the search |
-| <LEADER>rt | Run the `ctags` to reload the tags |
-| <LEADER>d  | Print a debugger in a new line |
-| <LEADER>p  | Open the Telescope |
-| <LEADER>ff | Open the Telescope in `find_files` mode |
-| <LEADER>e  | Toggle the NeoTree explorer |
-| <LEADER>ew | Toggle the NeoTree explorer in a popup floating window |
-| <LEADER>ef | Toggle the NeoTree explorer with focus on the current file |
-| <C-n>      | Go to the forward item in the copies history|
-| <C-p>      | Go to the backward item in the copies history|
-| <A-p>      | Go to the previous occurrence of the method |
-| <A-n>      | Go to the next occurrence of the method |
-| <LEADER>hb | Show the `git blame` of the current line |
+| \<LEADER\>/  | Clear the highlight of the search |
+| \<LEADER\>rt | Run the `ctags` to reload the tags |
+| \<LEADER\>d  | Print a debugger in a new line |
+| \<LEADER\>p  | Open the Telescope |
+| \<LEADER\>ff | Open the Telescope in `find_files` mode |
+| \<LEADER\>e  | Toggle the NeoTree explorer |
+| \<LEADER\>ew | Toggle the NeoTree explorer in a popup floating window |
+| \<LEADER\>ef | Toggle the NeoTree explorer with focus on the current file |
+| \<C-n\>      | Go to the forward item in the copies history|
+| \<C-p\>      | Go to the backward item in the copies history|
+| \<A-p\>      | Go to the previous occurrence of the method |
+| \<A-n\>      | Go to the next occurrence of the method |
+| \<LEADER\>hb | Show the `git blame` of the current line |
 | [c         | Go to the previous change in the file |
 | ]c         | Go to the next change in the file |
-| <C-h>      | Go to the previous file in buffer |
-| <C-l>      | Go to the next file in buffer |
-| <LEADER>bd | Remove the current file from buffer |
-| <LEADER>l  | Swap between the two files in buffer |
+| \<C-h\>      | Go to the previous file in buffer |
+| \<C-l\>      | Go to the next file in buffer |
+| \<LEADER\>bd | Remove the current file from buffer |
+| \<LEADER\>l  | Swap between the two files in buffer |
 | gh         | Find references to the current method in project |
 | gr         | Rename the current method/variable in the file |
 | gd         | Show the definition of the class/method |
-| <LEADER>o  | Toggle the sidebar with the class and methods |
-| <A-d>      | Open the terminal floating window |
+| \<LEADER\>o  | Toggle the sidebar with the class and methods |
+| \<A-d\>      | Open the terminal floating window |
+| za         | Toggle the folding |
 
 ## Filetypes
 
