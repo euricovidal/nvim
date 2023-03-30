@@ -97,6 +97,12 @@ Set as ` : `, but have the alias as ` ; `, só don't need to press **SHIFT** to 
 | \<LEADER\>rel  | Move the current var to a `let` in RSpec (RExtractLet) |
 | \<LEADER\>rit  | Remove the temp variable and use the value instead of the var (RInlineTemp) |
 
+
+# Useful commands
+
+| Command  | Description |
+| :A       | Toggle between the class and the test |
+
 ## Filetypes
 
 The unkown filetypes can be defined the type in [nvim/filetype.lua](https://github.com/euricovidal/neovim/blob/main/filetype.lua).
