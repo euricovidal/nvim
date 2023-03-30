@@ -6,30 +6,30 @@ TODO
 
 ## Plugins
 
-Are defined in [nvim/lua/plugins/](./neovim/tree/main/lua/plugins).
+Are defined in [nvim/lua/plugins/](https://github.com/euricovidal/neovim/tree/main/lua/plugins).
 
 |     Plugin    | Configs           | Description |
 |----------------|------------------|-------------|
-| [Yanky](https://github.com/gbprod/yanky.nvim) | [yanky.lua](./neovim/blob/main/lua/plugins/yanky.lua) | Manage and store all the copies/deletes |
-| [Wakatime](https://github.com/wakatime/vim-wakatime) | [wakatime.lua](./neovim/blob/main/lua/plugins/wakatime.lua) | External data, register the infos about the working time and programming languages |
-| [Trouble](https://github.com/folke/trouble.nvim) | [trouble.lua](./neovim/blob/main/lua/plugins/trouble.lua) | TODO |
-| [Tidy](./neovim/blob/main/lua/plugins/tidy.lua) | [tidy.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/tidy.lua) | Remove the spaces in empty lines |
-| [Telescope](https://github.com/nvim-telescope/telescope.nvim) | [telescope.lua](./neovim/blob/main/lua/plugins/telescope.lua) | TODO |
-| [Snippy](./neovim/blob/main/lua/plugins/telescope.lua) | [snippy.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/snippy.lua) | Basic snippets |
-| [Scrollbar](https://github.com/petertriho/nvim-scrollbar) | [scrollbar.lua](./neovim/blob/main/lua/plugins/scrollbar.lua) | Set a minimal scrollbar to show the position, trouble and git changes |
-| [Rails](https://github.com/tpope/vim-rails) | [rails.lua](./neovim/blob/main/lua/plugins/rails.lua) | More details to snippets about the ruby on rails structure |
-| [NeoTree](https://github.com/nvim-neo-tree/neo-tree.nvim) | [neo-tree.lua](./neovim/blob/main/lua/plugins/neo-tree.lua) | Tree of files, like explorer or NERDTree, with infos about the buffer and git status |
-| [Monokai](https://github.com/crusoexia/vim-monokai) | [monokai.lua](./neovim/blob/main/lua/plugins/monokai.lua) | The theme/colorscheme as monokai |
-| [Mini](https://github.com/echasnovski/mini.nvim) | [mini.lua](./neovim/blob/main/lua/plugins/mini.lua) | TODO¹ |
-| [Lualine]( https://github.com/nvim-lualine/lualine.nvim) | [lualine.lua](./neovim/blob/main/lua/plugins/lualine.lua) | Use to set the statusline |
-| [LspSaga](https://github.com/glepnir/lspsaga.nvim) | [lspsaga.lua](./neovim/blob/main/lua/plugins/lspsaga.lua) | Improve in the LSP |
-| [LspConfig](https://github.com/neovim/nvim-lspconfig) | [lspconfig.lua](./neovim/blob/main/lua/plugins/lspconfig.lua) | Configuring the LSP² |
-| [LastPlace](https://github.com/farmergreg/vim-lastplace) | [lastplace.lua](./neovim/blob/main/lua/plugins/lastplace.lua) | Preserve the last cursor position in the file |
-| [Illuminate](https://github.com/RRethy/vim-illuminate) | [illuminate.lua](./neovim/blob/main/lua/plugins/illuminate.lua) | Highlith the current method in the file |
-| [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) | [gitsigns.lua](./neovim/blob/main/lua/plugins/gitsigns.lua) | Git infos, git blame in the current line will be display in 3s in the line |
-| [Dashboard](https://github.com/glepnir/dashboard-nvim) | [dashboard.lua](./neovim/blob/main/lua/plugins/dashboard.lua) | Init screen/dashboard |
-| [Bufferline](https://github.com/akinsho/bufferline.nvim) | [bufferline.lua](./neovim/blob/main/lua/plugins/bufferline.lua) | Buffer files display like tabs in the top |
-| [Ale](https://github.com/dense-analysis/ale) | [ale.lua](./neovim/blob/main/lua/plugins/ale.lua) | Async lint check |
+| [Yanky](https://github.com/gbprod/yanky.nvim) | [yanky.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/yanky.lua) | Manage and store all the copies/deletes |
+| [Wakatime](https://github.com/wakatime/vim-wakatime) | [wakatime.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/wakatime.lua) | External data, register the infos about the working time and programming languages |
+| [Trouble](https://github.com/folke/trouble.nvim) | [trouble.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/trouble.lua) | TODO |
+| [Tidy](https://github.com/euricovidal/neovim/blob/main/lua/plugins/tidy.lua) | [tidy.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/tidy.lua) | Remove the spaces in empty lines |
+| [Telescope](https://github.com/nvim-telescope/telescope.nvim) | [telescope.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/telescope.lua) | TODO |
+| [Snippy](https://github.com/euricovidal/neovim/blob/main/lua/plugins/telescope.lua) | [snippy.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/snippy.lua) | Basic snippets |
+| [Scrollbar](https://github.com/petertriho/nvim-scrollbar) | [scrollbar.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/scrollbar.lua) | Set a minimal scrollbar to show the position, trouble and git changes |
+| [Rails](https://github.com/tpope/vim-rails) | [rails.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/rails.lua) | More details to snippets about the ruby on rails structure |
+| [NeoTree](https://github.com/nvim-neo-tree/neo-tree.nvim) | [neo-tree.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/neo-tree.lua) | Tree of files, like explorer or NERDTree, with infos about the buffer and git status |
+| [Monokai](https://github.com/crusoexia/vim-monokai) | [monokai.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/monokai.lua) | The theme/colorscheme as monokai |
+| [Mini](https://github.com/echasnovski/mini.nvim) | [mini.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/mini.lua) | TODO¹ |
+| [Lualine]( https://github.com/nvim-lualine/lualine.nvim) | [lualine.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/lualine.lua) | Use to set the statusline |
+| [LspSaga](https://github.com/glepnir/lspsaga.nvim) | [lspsaga.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/lspsaga.lua) | Improve in the LSP |
+| [LspConfig](https://github.com/neovim/nvim-lspconfig) | [lspconfig.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/lspconfig.lua) | Configuring the LSP² |
+| [LastPlace](https://github.com/farmergreg/vim-lastplace) | [lastplace.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/lastplace.lua) | Preserve the last cursor position in the file |
+| [Illuminate](https://github.com/RRethy/vim-illuminate) | [illuminate.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/illuminate.lua) | Highlith the current method in the file |
+| [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) | [gitsigns.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/gitsigns.lua) | Git infos, git blame in the current line will be display in 3s in the line |
+| [Dashboard](https://github.com/glepnir/dashboard-nvim) | [dashboard.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/dashboard.lua) | Init screen/dashboard |
+| [Bufferline](https://github.com/akinsho/bufferline.nvim) | [bufferline.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/bufferline.lua) | Buffer files display like tabs in the top |
+| [Ale](https://github.com/dense-analysis/ale) | [ale.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/ale.lua) | Async lint check |
 
 
 ¹ TODO of mini
@@ -93,4 +93,4 @@ Set as *:*, but have the alias as *;*, só don't need to press SHIFT to use it.
 
 ## Filetypes
 
-The unkown filetypes can be defined the type in [nvim/filetype.lua](./neovim/blob/main/filetype.lua).
+The unkown filetypes can be defined the type in [nvim/filetype.lua](https://github.com/euricovidal/neovim/blob/main/filetype.lua).
