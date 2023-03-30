@@ -34,6 +34,7 @@ Are defined in [nvim/lua/plugins/](https://github.com/euricovidal/neovim/tree/ma
 
 
 ¹ TODO of mini
+
 ² current is using only the [solargraph](https://solargraph.org)
 
 ## Configs
@@ -102,6 +103,7 @@ Set as ` : `, but have the alias as ` ; `, só don't need to press **SHIFT** to 
 # Useful commands
 
 | Command  | Description |
+|----------|-------------|
 | :A       | Toggle between the class and the test |
 
 ## Filetypes
