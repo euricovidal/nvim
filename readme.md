@@ -96,6 +96,7 @@ Set as ` : `, but have the alias as ` ; `, só don't need to press **SHIFT** to 
 | \<LEADER\>rcpc | Convert the conditional (if/...) from the end of line to a block (RConvertPostConditional) |
 | \<LEADER\>rel  | Move the current var to a `let` in RSpec (RExtractLet) |
 | \<LEADER\>rit  | Remove the temp variable and use the value instead of the var (RInlineTemp) |
+| \<LEADER\>ct   | Search for git conflict markers in file |
 
 
 # Useful commands
