@@ -60,7 +60,7 @@ Are defined in [nvim/lua/plugins/](https://github.com/euricovidal/neovim/tree/ma
 
 ## Leader
 
-Set as *:*, but have the alias as *;*, só don't need to press SHIFT to use it.
+Set as ` : `, but have the alias as ` ; `, só don't need to press **SHIFT** to use it.
 
 ## Keybinds
 
