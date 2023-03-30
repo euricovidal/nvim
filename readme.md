@@ -1,5 +1,7 @@
 # NeoVim
 
+![ezgif com-optimize](https://user-images.githubusercontent.com/266061/228981500-1af29fda-38b2-4bb7-aa2b-36d3eaf76e78.gif)
+
 ## Dependencies
 
 TODO
