@@ -30,6 +30,7 @@ Are defined in [nvim/lua/plugins/](https://github.com/euricovidal/neovim/tree/ma
 | [Dashboard](https://github.com/glepnir/dashboard-nvim) | [dashboard.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/dashboard.lua) | Init screen/dashboard |
 | [Bufferline](https://github.com/akinsho/bufferline.nvim) | [bufferline.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/bufferline.lua) | Buffer files display like tabs in the top |
 | [Ale](https://github.com/dense-analysis/ale) | [ale.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/ale.lua) | Async lint check |
+| [RubyRefactoring](https://github.com/ecomba/vim-ruby-refactoring) | [ruby-refactor.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/ruby-refactor.lua) | Keymaps for Ruby |
 
 
 ¹ TODO of mini
@@ -91,6 +92,12 @@ Set as ` : `, but have the alias as ` ; `, só don't need to press **SHIFT** to 
 | \<LEADER\>o  | Toggle the sidebar with the class and methods |
 | \<A-d\>      | Open the terminal floating window |
 | za         | Toggle the folding |
+| \<LEADER\>rap  | Add new parameter to the current method (RAddParameter) |
+| \<LEADER\>rcpc | Convert the conditional (if/...) from the end of line to a block (RConvertPostConditional) |
+| \<LEADER\>rel  | Move the current var to a `let` in RSpec (RExtractLet) |
+| \<LEADER\>rit  | Remove the temp variable and use the value instead of the var (RInlineTemp) |
+| \<LEADER\>rrlv | Rename local variable (RRenameLocalVariable) |
+| \<LEADER\>rriv | Rename instance variable (RRenameInstanceVariable) |
 
 ## Filetypes
 
