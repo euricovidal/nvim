@@ -1,4 +1,4 @@
-# NVIM
+# NeoVim
 
 ## Dependencies
 
@@ -8,7 +8,6 @@ TODO
 
 Are defined in [nvim/lua/plugins/](https://github.com/euricovidal/neovim/tree/main/lua/plugins).
 
-|----------------|------------------|-------------|
 |     Plugin    | Configs           | Description |
 |----------------|------------------|-------------|
 | [Yanky](https://github.com/gbprod/yanky.nvim) | [yanky.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/yanky.lua) | Manage and store all the copies/deletes |
@@ -31,14 +30,13 @@ Are defined in [nvim/lua/plugins/](https://github.com/euricovidal/neovim/tree/ma
 | [Dashboard](https://github.com/glepnir/dashboard-nvim) | [dashboard.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/dashboard.lua) | Init screen/dashboard |
 | [Bufferline](https://github.com/akinsho/bufferline.nvim) | [bufferline.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/bufferline.lua) | Buffer files display like tabs in the top |
 | [Ale](https://github.com/dense-analysis/ale) | [ale.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/ale.lua) | Async lint check |
-|----------------|------------------|-------------|
+
 
 ¹ TODO of mini
 ² current is using only the [solargraph](https://solargraph.org)
 
 ## Configs
 
-|----------------|-------------|
 |      Param     | Description |
 |----------------|-------------|
 | number         | Enable the line numbers |
@@ -57,7 +55,6 @@ Are defined in [nvim/lua/plugins/](https://github.com/euricovidal/neovim/tree/ma
 | directory      | Set swapdir inside the nvim dir in a tmp folder¹ |
 | expandtab      | Enable the expandtab to soft the TAB |
 | shiftwidth     | Set the tab as two spaces |
-|----------------|-------------|
 
 ¹ these directories are auto created as nvim/tmp/NAME
 
@@ -67,7 +64,6 @@ Set as *:*, but have the alias as *;*, só don't need to press SHIFT to use it.
 
 ## Keybinds
 
-|------------|-------------|
 |   Keybind  | Description |
 |------------|-------------|
 | <LEADER>/  | Clear the highlight of the search |
@@ -94,7 +90,6 @@ Set as *:*, but have the alias as *;*, só don't need to press SHIFT to use it.
 | gd         | Show the definition of the class/method |
 | <LEADER>o  | Toggle the sidebar with the class and methods |
 | <A-d>      | Open the terminal floating window |
-|------------|-------------|
 
 ## Filetypes
 
