@@ -40,9 +40,9 @@ vim.cmd("set undofile")
 vim.cmd("set backupdir=~/.config/nvim/tmp/backup/")
 vim.cmd("set undodir=~/.config/nvim/tmp/undo/")
 vim.cmd("set directory=~/.config/nvim/tmp/swap/")
-os.execute("mkdir -p ./tmp/backup/")
-os.execute("mkdir -p ./tmp/undo/")
-os.execute("mkdir -p ./tmp/swap/")
+os.execute("mkdir -p ~/.config/nvim/tmp/backup/")
+os.execute("mkdir -p ~/.config/nvim/tmp/undo/")
+os.execute("mkdir -p ~/.config/nvim/tmp/swap/")
 
 -- Force he soft of TAB
 vim.o.expandtab = true
