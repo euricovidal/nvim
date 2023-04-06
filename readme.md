@@ -93,7 +93,7 @@ Set as ` : `, but have the alias as ` ; `, só don't need to press **SHIFT** to 
 
 <details>
 
-<summary>+ details</details>
+<summary>+ details</summary>
 
 |   Keybind  | Description |
 |------------|-------------|
