@@ -12,7 +12,15 @@ sudo apt install -y universal-ctags
 
 To use the custom icons, you need to install the [NerdFonts](https://www.nerdfonts.com).
 
+## Install
+
+Clone that repo in `~/.config/`.
+
+<details>
+
+<summary>
 ## Plugins
+</summary>
 
 Are defined in [nvim/lua/plugins/](https://github.com/euricovidal/neovim/tree/main/lua/plugins).
 
@@ -44,6 +52,8 @@ Are defined in [nvim/lua/plugins/](https://github.com/euricovidal/neovim/tree/ma
 ¹ TODO of mini
 
 ² current is using only the [solargraph](https://solargraph.org)
+
+</details>
 
 ## Configs
 
