@@ -75,6 +75,12 @@ Set as ` : `, but have the alias as ` ; `, só don't need to press **SHIFT** to 
 | \<LEADER\>d  | Print a debugger in a new line |
 | \<LEADER\>p  | Open the Telescope |
 | \<LEADER\>ff | Open the Telescope in `find_files` mode |
+| \<TAB\>      | Toggle the selection of file on Telescope |
+| \<C-x\>      | Open the Telescope selected file on split |
+| \<C-v\>      | Open the Telescope selected file on vertical split |
+| \<C-t\>      | Open the Telescope selected file in a new tab |
+| \<C-u\>      | Go to UP of preview pane on Telescope |
+| \<C-d\>      | Go to DOWN of preview pane on Telescope |
 | \<LEADER\>e  | Toggle the NeoTree explorer |
 | \<LEADER\>ew | Toggle the NeoTree explorer in a popup floating window |
 | \<LEADER\>ef | Toggle the NeoTree explorer with focus on the current file |
