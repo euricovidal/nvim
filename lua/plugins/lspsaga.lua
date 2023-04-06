@@ -19,7 +19,7 @@ return { -- https://github.com/glepnir/lspsaga.nvim
     keymap("n", "gr", "<cmd>Lspsaga rename<CR>")
 
     -- Rename all occurrences of the hovered word for the selected files
-    -- keymap("n", "gr", "<cmd>Lspsaga rename ++project<CR>")
+    keymap("n", "gR", "<cmd>Lspsaga rename ++project<CR>")
 
     -- Peek definition
     -- You can edit the file containing the definition in the floating window
