@@ -10,6 +10,8 @@ Using CTAGS, it's optional to install:
 sudo apt install -y universal-ctags
 ```
 
+To use the custom icons, you need to install the [NerdFonts](https://www.nerdfonts.com).
+
 ## Plugins
 
 Are defined in [nvim/lua/plugins/](https://github.com/euricovidal/neovim/tree/main/lua/plugins).
