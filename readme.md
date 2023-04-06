@@ -136,7 +136,7 @@ Set as ` : `, but have the alias as ` ; `, só don't need to press **SHIFT** to 
 
 </details>
 
-# Useful commands
+## Useful commands
 
 | Command  | Description |
 |----------|-------------|
