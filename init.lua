@@ -56,7 +56,7 @@ vim.keymap.set("n", "<leader>/", ":nohl<CR>")
 vim.keymap.set(
   "n",
   "<leader>rt",
-  ":!ctags --extra=+f --exclude=.git --exclude=log --exclude=node_modules --exclude=db --exclude=tmp -R *<CR>"
+  ":!ctags --extras=+f --exclude=.git --exclude=log --exclude=node_modules --exclude=db --exclude=tmp -R *<CR>"
 )
 
 -- write a debugger 🤘
