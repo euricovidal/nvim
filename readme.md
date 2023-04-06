@@ -21,9 +21,9 @@ Clone that repo in `~/.config/`.
 
 <details>
 
-<summary>
+<summary>+ details</summary>
+
 Are defined in [nvim/lua/plugins/](https://github.com/euricovidal/neovim/tree/main/lua/plugins).
-</summary>
 
 |     Plugin    | Configs           | Description |
 |----------------|------------------|-------------|
