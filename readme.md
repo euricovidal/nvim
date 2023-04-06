@@ -59,7 +59,9 @@ Are defined in [nvim/lua/plugins/](https://github.com/euricovidal/neovim/tree/ma
 ## Configs
 
 <details>
+
 <summary>+ details</summary>
+
 |      Param     | Description |
 |----------------|-------------|
 | number         | Enable the line numbers |
@@ -80,6 +82,7 @@ Are defined in [nvim/lua/plugins/](https://github.com/euricovidal/neovim/tree/ma
 | shiftwidth     | Set the tab as two spaces |
 
 ¹ these directories are auto created as nvim/tmp/NAME
+
 </details>
 
 ## Leader
@@ -89,7 +92,9 @@ Set as ` : `, but have the alias as ` ; `, só don't need to press **SHIFT** to 
 ## Keybinds
 
 <details>
+
 <summary>+ details</details>
+
 |   Keybind  | Description |
 |------------|-------------|
 | \<LEADER\>/  | Clear the highlight of the search |
