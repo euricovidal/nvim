@@ -4,7 +4,11 @@
 
 ## Dependencies
 
-TODO
+Using CTAGS, it's optional to install:
+
+```sh
+sudo apt install -y universal-ctags
+```
 
 ## Plugins
 
