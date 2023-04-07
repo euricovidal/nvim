@@ -12,9 +12,21 @@ sudo apt install -y universal-ctags
 
 To use the custom icons, you need to install the [NerdFonts](https://www.nerdfonts.com).
 
+To use the LSP, install the servers and configure on [lspconfig.lua](https://github.com/euricovidal/nvim/blob/main/lua/plugins/lspconfig.lua#L7):
+
+```sh
+gem install --user-install solargraph solargraph-rails
+```
+
 ## Install
 
 Clone that repo in `~/.config/`.
+
+Open the `nvim` and run:
+
+```
+:TSInstall ruby python json bash php html javascript rust css markdown markdown_inline regex
+```
 
 ## Plugins
 
