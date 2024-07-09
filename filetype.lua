@@ -13,6 +13,7 @@ vim.filetype.add({
   },
   pattern = {
     ['.*%.arb'] = 'ruby',
+    ['.*%.axlsx'] = 'ruby',
     ['.*%.conf'] = 'conf',
     ['.*%.theme'] = 'conf',
     ['.*%.gradle'] = 'groovy',
