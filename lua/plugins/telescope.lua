@@ -1,13 +1,22 @@
 return { -- Telescope (like CTRL+P, FZF)
-  "nvim-telescope/telescope.nvim", tag = "0.1.1", -- https://github.com/nvim-telescope/telescope.nvim
-  dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" },
+  "nvim-telescope/telescope.nvim", -- https://github.com/nvim-telescope/telescope.nvim
+  -- tag = "0.1.8",
+  dependencies = {
+    { "nvim-lua/plenary.nvim" },
+    { "nvim-tree/nvim-web-devicons" },
+    { "nvim-telescope/telescope-fzf-native.nvim", build = 'make' },
+  },
   config = function()
-    require("telescope").setup({
+    local telescope = require("telescope")
+
+    telescope.setup({
       defaults = {
         borderchars = { "─", "|", "─", "|", "╭", "╮", "╯", "╰" },
         layout_config = {
           prompt_position = "bottom",
-        }
+        },
+        color_devicons = true,
+        sorting_strategy = "ascending",
       },
       -- change to vertical layout to all the files path
       pickers = {
@@ -27,8 +36,22 @@ return { -- Telescope (like CTRL+P, FZF)
           layout_strategy = "vertical",
           layout_config = { width = 0.8, height = 0.8 },
         },
+      },
+      extension = {
+        fzf = {
+          fuzzy = true,
+          override_generic_sorter = true,
+          override_file_sorter = true,
+          case_mode = "smart_case",
+        },
+      },
+      project = {
+        search_by = "title",
+        hidden_files = true,
       }
     })
+
+    telescope.load_extension("fzf")
 
     -- Enable to wrap the code on preview pane
     -- vim.cmd("autocmd User TelescopePreviewerLoaded setlocal wrap")

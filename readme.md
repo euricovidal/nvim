@@ -7,7 +7,7 @@
 Using CTAGS, it's optional to install:
 
 ```sh
-sudo apt install -y universal-ctags
+sudo apt install -y universal-ctags ripgrep fzf
 ```
 
 To use the custom icons, you need to install the [NerdFonts](https://www.nerdfonts.com).
@@ -121,8 +121,9 @@ Set as ` : `, but have the alias as ` ; `, só don't need to press **SHIFT** to 
 | \<C-u\>      | Go to UP of preview pane on Telescope |
 | \<C-d\>      | Go to DOWN of preview pane on Telescope |
 | \<LEADER\>e  | Toggle the NeoTree explorer |
-| \<LEADER\>ew | Toggle the NeoTree explorer in a popup floating window |
 | \<LEADER\>ef | Toggle the NeoTree explorer with focus on the current file |
+| \<LEADER\>ew | Toggle the NeoTree explorer in a popup floating window |
+| \<LEADER\>eg | Toggle the NeoTree git status in a popup floating window |
 | \<C-n\>      | Go to the forward item in the copies history|
 | \<C-p\>      | Go to the backward item in the copies history|
 | \<A-p\>      | Go to the previous occurrence of the method |

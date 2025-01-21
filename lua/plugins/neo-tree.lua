@@ -1,5 +1,6 @@
 return { -- Files Tree
-  "nvim-neo-tree/neo-tree.nvim", branch = "v2.x", -- https://github.com/nvim-neo-tree/neo-tree.nvim
+  "nvim-neo-tree/neo-tree.nvim", -- https://github.com/nvim-neo-tree/neo-tree.nvim
+  -- branch = "v2.x",
   dependencies = {
     "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim",
     {
@@ -26,8 +27,8 @@ return { -- Files Tree
   config = function()
     require("neo-tree").setup({
       source_selector = {
-        winbar = true,
-        statusline = true
+        winbar = false,
+        statusline = false
       },
       window = {
         position = "left",
@@ -89,9 +90,10 @@ return { -- Files Tree
         }
       },
     })
-    vim.keymap.set('n', '<leader>ef', ':NeoTreeRevealToggle<CR>')
-    vim.keymap.set('n', '<leader>e', ':NeoTreeFocusToggle<CR>')
-    vim.keymap.set('n', '<leader>ew', ':NeoTreeFloatToggle<CR>')
+    vim.keymap.set('n', '<leader>ef', ':Neotree reveal<CR>')
+    vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>')
+    vim.keymap.set('n', '<leader>ew', ':Neotree float<CR>')
+    vim.keymap.set('n', '<leader>eg', ':Neotree float git_status<CR>')
   end
 }
 -- { -- other option - Files Tree
