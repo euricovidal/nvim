@@ -28,6 +28,35 @@ Open the `nvim` and run:
 :TSInstall ruby python json bash php html javascript rust css markdown markdown_inline regex
 ```
 
+For ruby in Coc
+```
+gem install solargraph solargraph-rails
+```
+
+For Javascript on Coc
+```
+npm install -g typescript typescript-language-server eslint
+```
+
+For python in Coc
+```
+npm install -g pyright
+```
+
+```
+pip3 install neovim # or sudo apt install python3-neovim
+```
+
+## Post instalation
+
+nvim --headless "+Lazy! update" +qa
+
+To install the Coc dependencies, open the nvim and run:
+
+```
+:CocInstall coc-solargraph coc-json coc-tsserver coc-snippets coc-eslint
+```
+
 ## Plugins
 
 
@@ -51,8 +80,7 @@ Are defined in [nvim/lua/plugins/](https://github.com/euricovidal/neovim/tree/ma
 | [Monokai](https://github.com/crusoexia/vim-monokai) | [monokai.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/monokai.lua) | The theme/colorscheme as monokai |
 | [Mini](https://github.com/echasnovski/mini.nvim) | [mini.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/mini.lua) | TODO¹ |
 | [Lualine]( https://github.com/nvim-lualine/lualine.nvim) | [lualine.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/lualine.lua) | Use to set the statusline |
-| [LspSaga](https://github.com/glepnir/lspsaga.nvim) | [lspsaga.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/lspsaga.lua) | Improve in the LSP |
-| [LspConfig](https://github.com/neovim/nvim-lspconfig) | [lspconfig.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/lspconfig.lua) | Configuring the LSP² |
+| [LspSaga](https://github.com/neoclide/coc.nvim) | [lspcoc.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/lspcoc.lua) | Improve in the LSP |
 | [LastPlace](https://github.com/farmergreg/vim-lastplace) | [lastplace.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/lastplace.lua) | Preserve the last cursor position in the file |
 | [Illuminate](https://github.com/RRethy/vim-illuminate) | [illuminate.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/illuminate.lua) | Highlith the current method in the file |
 | [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) | [gitsigns.lua](https://github.com/euricovidal/neovim/blob/main/lua/plugins/gitsigns.lua) | Git infos, git blame in the current line will be display in 3s in the line |

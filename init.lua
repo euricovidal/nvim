@@ -84,3 +84,11 @@ vim.keymap.set(
 
 -- Find merge conflict markers
 vim.keymap.set("n", "<leader>cf", "<ESC>/\\v^[<=>|]{7,}( .*|$)<CR>")
+
+local slice = vim.fn.exists("*slice") == 1 and vim.fn.slice
+  or function(str, start, _end)
+    local char_amount = strchars(str)
+    _end = _end or char_amount
+    _end = _end < 0 and (char_amount + _end) or _end
+    return strcharpart(str, start, _end)
+  end

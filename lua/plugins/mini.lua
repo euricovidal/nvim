@@ -2,7 +2,7 @@ return { -- https://github.com/echasnovski/mini.nvim
   "echasnovski/mini.nvim", version = '*',
   config = function()
     require("mini.animate").setup()
-    require("mini.completion").setup()
+    -- require("mini.completion").setup() -- NOT necessary, when load the LspCoc
     require("mini.move").setup({
       mappings = {
         -- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.

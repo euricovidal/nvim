@@ -1,0 +1,53 @@
+{
+  "suggest.noselect": true,
+  "suggest.enablePreselect": false,
+  "languageserver": {
+    "ruby": {
+      "command": "solargraph",
+      "filetypes": ["ruby", "rakefile"],
+      "settings": {
+        "solargraph": {
+          "useBundler": true,
+          "bundlerPath": "bundle",
+          "commandPath": "solargraph",
+          "diagnostics": true,
+          "completion": true,
+          "rails": true,
+          "transport": "stdio"
+        }
+      }
+    },
+    "python": {
+      "command": "pyright-langserver",
+      "args": ["--stdio"],
+      "filetypes": ["python"],
+      "settings": {
+        "python": {
+          "analysis": {
+            "typeCheckingMode": "basic",
+            "autoSearchPaths": true,
+            "useLibraryCodeForTypes": true
+          }
+        }
+      }
+    },
+    "javascript": {
+      "command": "typescript-language-server",
+      "args": ["--stdio"],
+      "filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+      "settings": {
+        "javascript": {
+          "format": {
+            "enable": true
+          }
+        },
+        "typescript": {
+          "format": {
+            "enable": true
+          }
+        }
+      }
+    }
+  },
+  "snippets.ultisnips.pythonPrompt": false
+}
